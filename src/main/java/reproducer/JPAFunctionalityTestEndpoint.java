@@ -157,7 +157,9 @@ public class JPAFunctionalityTestEndpoint extends HttpServlet {
 
                         @Override
                         public Properties getProperties() {
-                            return null;
+                            Properties properties = new Properties();
+                            properties.put("hibernate.hbm2ddl.auto","create-drop");
+                            return properties;
                         }
 
                         @Override
